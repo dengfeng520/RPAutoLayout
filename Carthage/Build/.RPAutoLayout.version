@@ -1,0 +1,20 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "dfbcd1d88e2fa50a9a02705da0254e8fccc1e279",
+  "iOS" : [
+    {
+      "hash" : "11a8004d0ae2478b4e698539f149009288083bd0762d5c2ed0b82d0b3792c53b",
+      "name" : "RPAutoLayout",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"
+    }
+  ]
+}

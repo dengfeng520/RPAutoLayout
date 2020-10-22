@@ -1,0 +1,11 @@
+framework module RPAutoLayout {
+  umbrella header "RPAutoLayout.h"
+
+  export *
+  module * { export * }
+}
+
+module RPAutoLayout.Swift {
+    header "RPAutoLayout-Swift.h"
+    requires objc
+}

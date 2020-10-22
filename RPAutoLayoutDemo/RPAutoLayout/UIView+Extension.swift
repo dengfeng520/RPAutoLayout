@@ -19,7 +19,8 @@ public extension UIView {
     var centerX: NSLayoutXAxisAnchor { return centerXAnchor }
     var centerY: NSLayoutYAxisAnchor { return centerYAnchor }
     
-    public func rp_layout(_ addView: UIView? = nil) -> RPAutoLayout {
+    @discardableResult
+    func rp_layout(_ addView: UIView? = nil) -> RPAutoLayout {
         guard let `addView` = addView else {
             return RPAutoLayout(view: self)
         }
@@ -28,7 +29,8 @@ public extension UIView {
     }
     
     /// addSubview
-    @discardableResult public func rp_add(_ addView: UIView?) -> UIView {
+    @discardableResult
+    func rp_add(_ addView: UIView?) -> UIView {
         guard let `addView` = addView else {
             return self
         }
