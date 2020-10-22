@@ -8,10 +8,10 @@
   "tvOS" : [
 
   ],
-  "commitish" : "dfbcd1d88e2fa50a9a02705da0254e8fccc1e279",
+  "commitish" : "06b02f1bd8910ec8a344dc01dfefde53df1d5a4f",
   "iOS" : [
     {
-      "hash" : "11a8004d0ae2478b4e698539f149009288083bd0762d5c2ed0b82d0b3792c53b",
+      "hash" : "923ad0272856ac39511b3b98aa27eb3a84d8dcc6eb91fc9eeb73cf58653c02d8",
       "name" : "RPAutoLayout",
       "linking" : "dynamic",
       "swiftToolchainVersion" : "5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"

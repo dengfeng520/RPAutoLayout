@@ -10,6 +10,8 @@ import UIKit
 
 public extension UIView {
     
+    var leading: NSLayoutAnchor<NSLayoutXAxisAnchor> { return leadingAnchor }
+    var trailing: NSLayoutAnchor<NSLayoutXAxisAnchor> { return trailingAnchor }
     var top: NSLayoutAnchor<NSLayoutYAxisAnchor> { return topAnchor }
     var left: NSLayoutAnchor<NSLayoutXAxisAnchor> { return leftAnchor }
     var bottom: NSLayoutAnchor<NSLayoutYAxisAnchor> { return bottomAnchor }
@@ -18,6 +20,22 @@ public extension UIView {
     var width: NSLayoutDimension { return widthAnchor }
     var centerX: NSLayoutXAxisAnchor { return centerXAnchor }
     var centerY: NSLayoutYAxisAnchor { return centerYAnchor }
+    var safeTop: NSLayoutAnchor<NSLayoutYAxisAnchor> {
+        if #available(iOS 11.0, *) {
+            return safeAreaLayoutGuide.topAnchor
+        } else {
+            // Fallback on earlier versions
+            return topAnchor
+        }
+    }
+    var safeBottom: NSLayoutAnchor<NSLayoutYAxisAnchor> {
+        if #available(iOS 11.0, *) {
+            return safeAreaLayoutGuide.bottomAnchor
+        } else {
+            // Fallback on earlier versions
+            return bottomAnchor
+        }
+    }
     
     @discardableResult
     func rp_layout(_ addView: UIView? = nil) -> RPAutoLayout {
