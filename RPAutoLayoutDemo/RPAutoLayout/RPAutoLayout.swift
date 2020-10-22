@@ -10,6 +10,8 @@ import UIKit
 
 public struct RPAutoLayout {
     public let view: UIView
+    public let leading: NSLayoutConstraint?
+    public let trailing: NSLayoutConstraint?
     public let top: NSLayoutConstraint?
     public let left: NSLayoutConstraint?
     public let bottom: NSLayoutConstraint?
@@ -21,6 +23,8 @@ public struct RPAutoLayout {
     
     public init(view: UIView) {
         self.view = view
+        leading = nil
+        trailing = nil
         top = nil
         left = nil
         bottom = nil
@@ -32,6 +36,8 @@ public struct RPAutoLayout {
     }
     
     private init(view: UIView,
+                 leading: NSLayoutConstraint?,
+                 trailing: NSLayoutConstraint?,
                  top: NSLayoutConstraint?,
                  left: NSLayoutConstraint?,
                  bottom: NSLayoutConstraint?,
@@ -41,6 +47,8 @@ public struct RPAutoLayout {
                  centerX: NSLayoutConstraint?,
                  centerY: NSLayoutConstraint?) {
         self.view = view
+        self.leading = leading
+        self.trailing = trailing
         self.top = top
         self.left = left
         self.bottom = bottom
@@ -52,6 +60,8 @@ public struct RPAutoLayout {
     }
     
     @discardableResult func update(edge: NSLayoutConstraint.Attribute, constraint: NSLayoutConstraint?) -> RPAutoLayout {
+        var leading = self.leading
+        var trailing = self.trailing
         var top = self.top
         var left = self.left
         var bottom = self.bottom
@@ -62,6 +72,8 @@ public struct RPAutoLayout {
         var centerY = self.centerY
         
         switch edge {
+        case .leading: leading = constraint
+        case .trailing: trailing = constraint
         case .top: top = constraint
         case .left: left = constraint
         case .bottom: bottom = constraint
@@ -75,6 +87,8 @@ public struct RPAutoLayout {
         
         return RPAutoLayout (
             view: self.view,
+            leading: leading,
+            trailing: trailing,
             top: top,
             left: left,
             bottom: bottom,
@@ -88,6 +102,8 @@ public struct RPAutoLayout {
     @discardableResult func insert(layout: RPAutoLayout) -> RPAutoLayout {
         return RPAutoLayout (
             view: self.view,
+            leading: layout.leading ?? leading,
+            trailing: layout.trailing ?? trailing,
             top: layout.top ?? top,
             left: layout.left ?? left,
             bottom: layout.bottom ?? bottom,
