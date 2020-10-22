@@ -1,5 +1,13 @@
 # RPAutoLayout
 
+![](https://img.shields.io/badge/language-swift-orange.svg)
+![](https://img.shields.io/cocoapods/l/RPBannerView-Swift.svg?style=flat)
+![](https://img.shields.io/badge/carthage-v1.0-519dd9.svg)
+
+**RPAutoLayout是一个轻量级自动布局Swift框架，对系统NSLayoutAnchor做了封装，采用链式语法, 支持iOS 9，Swift 5.0之后的版本**
+
+如果你使用的是Objective-C，[点击这里Objective-C 版本](https://github.com/dengfeng520/RPLayoutAnchor)
+
 iOS 6系统推出了AutoLayout，但由于其VFL格式语法比较晦涩，为开发和维护带来许多问题:
 
 ```
