@@ -8,17 +8,17 @@
 import UIKit
 
 extension UIView {
-    var leading: NSLayoutAnchor<NSLayoutXAxisAnchor> { return leadingAnchor }
-    var trailing: NSLayoutAnchor<NSLayoutXAxisAnchor> { return trailingAnchor }
-    var top: NSLayoutAnchor<NSLayoutYAxisAnchor> { return topAnchor }
-    var left: NSLayoutAnchor<NSLayoutXAxisAnchor> { return leftAnchor }
-    var bottom: NSLayoutAnchor<NSLayoutYAxisAnchor> { return bottomAnchor }
-    var right: NSLayoutAnchor<NSLayoutXAxisAnchor> { return rightAnchor }
-    var height: NSLayoutDimension { return heightAnchor }
-    var width: NSLayoutDimension { return widthAnchor }
-    var centerX: NSLayoutXAxisAnchor { return centerXAnchor }
-    var centerY: NSLayoutYAxisAnchor { return centerYAnchor }
-    var safeTop: NSLayoutAnchor<NSLayoutYAxisAnchor> {
+    public  var leading: NSLayoutAnchor<NSLayoutXAxisAnchor> { return leadingAnchor }
+    public  var trailing: NSLayoutAnchor<NSLayoutXAxisAnchor> { return trailingAnchor }
+    public var top: NSLayoutAnchor<NSLayoutYAxisAnchor> { return topAnchor }
+    public var left: NSLayoutAnchor<NSLayoutXAxisAnchor> { return leftAnchor }
+    public var bottom: NSLayoutAnchor<NSLayoutYAxisAnchor> { return bottomAnchor }
+    public var right: NSLayoutAnchor<NSLayoutXAxisAnchor> { return rightAnchor }
+    public var height: NSLayoutDimension { return heightAnchor }
+    public var width: NSLayoutDimension { return widthAnchor }
+    public var centerX: NSLayoutXAxisAnchor { return centerXAnchor }
+    public  var centerY: NSLayoutYAxisAnchor { return centerYAnchor }
+    public var safeTop: NSLayoutAnchor<NSLayoutYAxisAnchor> {
         if #available(iOS 11.0, *) {
             return safeAreaLayoutGuide.topAnchor
         } else {
@@ -26,7 +26,7 @@ extension UIView {
             return topAnchor
         }
     }
-    var safeBottom: NSLayoutAnchor<NSLayoutYAxisAnchor> {
+    public var safeBottom: NSLayoutAnchor<NSLayoutYAxisAnchor> {
         if #available(iOS 11.0, *) {
             return safeAreaLayoutGuide.bottomAnchor
         } else {
@@ -39,7 +39,7 @@ extension UIView {
 extension UIView {
     /// config layout
     @discardableResult
-    func rp_layout(_ addView: UIView? = nil) -> UIView {
+    public func rp_layout(_ addView: UIView? = nil) -> UIView {
         guard let `addView` = addView else {
             return self.superview ?? UIView()
         }
@@ -49,7 +49,7 @@ extension UIView {
     }
     /// addSubview
     @discardableResult
-    func rp_add(_ addView: UIView?) -> UIView {
+    public func rp_add(_ addView: UIView?) -> UIView {
         guard let `addView` = addView else {
             return self
         }
