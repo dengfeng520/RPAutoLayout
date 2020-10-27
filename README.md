@@ -4,11 +4,11 @@
 ![](https://img.shields.io/cocoapods/l/RPBannerView-Swift.svg?style=flat)
 ![](https://img.shields.io/badge/carthage-v1.0-519dd9.svg)
 
-**RPAutoLayout是一个轻量级自动布局Swift框架，对系统NSLayoutAnchor做了封装，采用链式语法, 支持iOS 9，Swift 5.0之后的版本**
+**`RPAutoLayout`是一个轻量级自动布局Swift框架，对系统`NSLayoutAnchor`做了封装，采用链式语法, 支持iOS 9，Swift 5.0之后的版本**
 
 如果你使用的是Objective-C，[点击这里Objective-C 版本](https://github.com/dengfeng520/RPLayoutAnchor)
 
-iOS 6系统推出了AutoLayout，但由于其VFL格式语法比较晦涩，为开发和维护带来许多问题:
+iOS 6系统推出了`AutoLayout`，但由于其VFL格式语法比较晦涩，为开发和维护带来许多问题:
 
 ```
 let redView = UIView()
@@ -23,7 +23,7 @@ NSLayoutConstraint.activate([top, left, width, height]) // iOS 8的写法
 redView.backgroundColor = .red
 ```
 
-iOS 9之后，系统提供了NSLayoutAnchor,
+iOS 9之后，系统提供了`NSLayoutAnchor`,
 
 ```
 let redView = UIView()
@@ -39,15 +39,16 @@ redView.backgroundColor = .red
 `RPAutoLayout`对系统`NSLayoutAnchor`做了封装采用链式语法，使代码更简洁。
 
 ```
-redView.rp_add(view)
-    .rp_layout()
+redView.rp_layout(view)
     .rp_top(to: view.top, constant: 50)
     .rp_left(to: view.left, constant: 80)
     .rp_width(constant: 80)
     .rp_height(constant: 80)
     .rp_activate()
+redView.backgroundColor = .red
 ```
-使用方法： 
+
+##### 1、如何导入工程
 
 目前只支持**Carthage**：
 
@@ -75,9 +76,26 @@ carthage update --platform iOS
 $(SRCROOT)/Carthage/Build/iOS/RPAutoLayout.framework
 ```
 
-在代码中使用：
+##### 2、如何使用
+
+* 添加约束
 
 ```
 import RPAutoLayout
 ```
 
+```
+centerView.rp_layout(view)
+    .rp_centerX(to: view.centerX)
+    .rp_centerY(to: view.centerY)
+    .rp_width(to: view.width, multiplier: 0.4)
+    .rp_height(to: centerView.width)
+    .rp_activate()
+centerView.backgroundColor = .blue
+```
+
+* 更新约束
+
+```
+centerView.rp_remakeHeight(to: centerView.widthAnchor, multiplier: 1.5)
+```
