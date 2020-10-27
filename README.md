@@ -99,3 +99,5 @@ centerView.backgroundColor = .blue
 ```
 centerView.rp_remakeHeight(to: centerView.widthAnchor, multiplier: 1.5)
 ```
+
+![update.gif](https://github.com/dengfeng520/RPAutoLayout/blob/main/update.gif?raw=true)
