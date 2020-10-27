@@ -17,6 +17,9 @@
 		1D61BF7125415BE800A33875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D61BF7025415BE800A33875 /* Assets.xcassets */; };
 		1D61BF7425415BE800A33875 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D61BF7225415BE800A33875 /* LaunchScreen.storyboard */; };
 		1D61BF8E25415CB500A33875 /* RPAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D61BF8C25415CB500A33875 /* RPAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DB07B2E2547CDCE002F6885 /* RPAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D376B232547BEB50088758F /* RPAutoLayout.swift */; };
+		1DB07B2F2547CDCE002F6885 /* RPAutoLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D376B242547BEB50088758F /* RPAutoLayoutExtension.swift */; };
+		1DB07B302547CDCE002F6885 /* RPAutoLayoutUpdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D376B222547BEB40088758F /* RPAutoLayoutUpdata.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -229,6 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DB07B2E2547CDCE002F6885 /* RPAutoLayout.swift in Sources */,
+				1DB07B2F2547CDCE002F6885 /* RPAutoLayoutExtension.swift in Sources */,
+				1DB07B302547CDCE002F6885 /* RPAutoLayoutUpdata.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
