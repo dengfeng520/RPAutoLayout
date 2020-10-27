@@ -8,14 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let redView = UIView()
+    let centerView = UIView()
+    var width: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let redView = UIView()
-        redView.rp_add(view)
-            .rp_layout()
+        
+        redView.rp_layout(view)
             .rp_top(to: view.top, constant: 50)
             .rp_left(to: view.left, constant: 80)
             .rp_width(constant: 80)
@@ -23,7 +26,7 @@ class ViewController: UIViewController {
             .rp_activate()
         redView.backgroundColor = .red
         
-        let centerView = UIView()
+        
         centerView.rp_layout(view)
             .rp_centerX(to: view.centerX)
             .rp_centerY(to: view.centerY)
@@ -32,7 +35,10 @@ class ViewController: UIViewController {
             .rp_activate()
         centerView.backgroundColor = .blue
     }
-
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        redView.rp_remakeWidth(constant: 120)
+        centerView.rp_remakeHeight(to: centerView.widthAnchor, multiplier: 1.5)
+    }
 }
 
