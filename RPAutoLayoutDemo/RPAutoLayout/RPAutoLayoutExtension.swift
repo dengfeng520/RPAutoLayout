@@ -224,4 +224,11 @@ extension UIView {
         self.heightAnchor.constraint(lessThanOrEqualTo: anchor, multiplier: m).isActive = true
         return self
     }
+    /// size
+    @discardableResult
+    public func rp_size(_ width: CGFloat, _ height: CGFloat) -> UIView {
+        self.widthAnchor.constraint(equalToConstant: width).isActive = true
+        self.heightAnchor.constraint(equalToConstant: height).isActive = true
+        return self
+    }
 }
