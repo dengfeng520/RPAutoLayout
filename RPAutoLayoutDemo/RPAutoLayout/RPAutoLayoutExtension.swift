@@ -218,7 +218,7 @@ extension UIView {
         self.heightAnchor.constraint(greaterThanOrEqualTo: anchor, multiplier: m).isActive = true
         return self
     }
-    /// width  lessThanOrEqual dimension
+    /// height  lessThanOrEqual dimension
     @discardableResult
     public func rp_height(lessThanOrEqual anchor: NSLayoutDimension, multiplier m: CGFloat = 1) -> UIView {
         self.heightAnchor.constraint(lessThanOrEqualTo: anchor, multiplier: m).isActive = true

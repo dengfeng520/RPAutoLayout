@@ -17,7 +17,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
         redView.rp_layout(view)
             .rp_top(to: view.top, constant: 50)
             .rp_left(to: view.left, constant: 80)
@@ -37,6 +36,7 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("--------------\(redView.constraints.count)")
         redView.rp_remakeWidth(constant: 120)
         centerView.rp_remakeHeight(to: centerView.widthAnchor, multiplier: 1.5)
     }

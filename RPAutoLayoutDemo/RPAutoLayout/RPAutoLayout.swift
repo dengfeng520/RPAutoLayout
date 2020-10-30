@@ -8,8 +8,8 @@
 import UIKit
 
 extension UIView {
-    public  var leading: NSLayoutAnchor<NSLayoutXAxisAnchor> { return leadingAnchor }
-    public  var trailing: NSLayoutAnchor<NSLayoutXAxisAnchor> { return trailingAnchor }
+    public var leading: NSLayoutAnchor<NSLayoutXAxisAnchor> { return leadingAnchor }
+    public var trailing: NSLayoutAnchor<NSLayoutXAxisAnchor> { return trailingAnchor }
     public var top: NSLayoutAnchor<NSLayoutYAxisAnchor> { return topAnchor }
     public var left: NSLayoutAnchor<NSLayoutXAxisAnchor> { return leftAnchor }
     public var bottom: NSLayoutAnchor<NSLayoutYAxisAnchor> { return bottomAnchor }
